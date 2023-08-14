@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+  display: grid;
+  column-gap: 30px;
+  grid-template-areas:
+    "order payment"
+    "total total";
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  padding: 30px;
+  row-gap: 30px;
+  width: 100%;
+}
+
+.order {
+  grid-area: order;
+}
+
+.payment {
+  grid-area: payment;
+}
+
+.total {
+  grid-area: total;
+}
+
+.logo {
+  height: 25px;
+  position: relative;
+  top: 3px;
+}
+
+.main-nav {
+  align-items: center;
+  background-color: #43281c;
+  color: #fbf2c0;
+  display: flex;
+  font-size: 16px;
+  font-weight: normal;
+  justify-content: center;
+}
+
+.box {
+  background-color: #eee1d5;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.box-title {
+  color: #885a2d;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  border-bottom: 2px solid #DDB892;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas:
+    "quantity title price"
+    "quantity option price";
+  padding: 10px 0;
+  row-gap: 8px;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item-quantity {
+  grid-area: quantity;
+}
+
+.item-title {
+  grid-area: title;
+  font-weight: bold;
+}
+
+.item-price {
+  grid-area: price;
+  font-weight: bold;
+}
+
+.item-options-list {
+  color: #B08968;
+  grid-area: option;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.item-option {
+  margin-bottom: 5px;
+}
